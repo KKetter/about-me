@@ -50,5 +50,28 @@ if(upperBranchAnswer === 'YES'||upperBranchAnswer === 'Y'){
 console.log('Typical military branch question asked. Please dont thank me for my service.');
 console.log(correctCounter + ' of '+ questionCounter + ' answers correct');
 //Q4
-
+var stateAnswer = prompt(userName + ', was I born in Washington?');
+questionCounter++;
+var upperStateAnswer = stateAnswer.toUpperCase();
+if(upperStateAnswer === 'NO'||upperStateAnswer === 'N'){
+    alert('Correct! \nI was born in California!');
+    correctCounter++;
+}else{
+    alert('Sorry, WA is great but parents had other ideas.');
+}
+console.log('Asked if I was born in WA - expecting no reponse.');
+console.log(correctCounter + ' of '+ questionCounter + ' answers correct');
 //Q5
+var hobbyAnswer = prompt(userName + ', did I play a childrens card game \"professionally\"?');
+questionCounter++;
+var upperBranchAnswer = branchAnswer.toUpperCase();
+if(upperBranchAnswer === 'YES'||upperBranchAnswer === 'Y'){
+    alert('Correct! \nSUGGESTED age is just that, a suggestion!');
+    correctCounter++;
+}else{
+    alert('Sorry, I am a mega nerd.\nGoogle \"Kent Ketter\" for a peek into niche gaming markets!');
+}
+console.log('Nerd questions about magic asked, I have the 1099s to prove it haha');
+console.log(correctCounter + ' of '+ questionCounter + ' answers correct');
+
+document.getElementById("results").innerHTML = correctCounter + ' of '+ questionCounter + ' answers correct';
