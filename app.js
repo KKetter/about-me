@@ -1,6 +1,7 @@
 'use strict';
 
 var userName = prompt('What is your name?');
+alert()
 
 if(userName === 'Kent'){
     console.log('Hey we have the same name');
