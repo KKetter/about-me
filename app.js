@@ -74,4 +74,4 @@ if(upperBranchAnswer === 'YES'||upperBranchAnswer === 'Y'){
 console.log('Nerd questions about magic asked, I have the 1099s to prove it haha');
 console.log(correctCounter + ' of '+ questionCounter + ' answers correct');
 
-document.getElementById("results").innerHTML = correctCounter + ' of '+ questionCounter + ' answers correct';
+document.getElementById("results").innerHTML = correctCounter + ' of '+ questionCounter + ' answers correct';}
