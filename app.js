@@ -78,26 +78,39 @@ var qSixGuesses = 0;
 questionCounter++;
 var userAgeGuess = prompt('How old am I?');
 var ageGuess = parseInt(userAgeGuess);
- while (qSixGuesses < 4) {
+ while (qSixGuesses < 5) {
     if (ageGuess > age) {
         qSixGuesses++;
         var ageGuess = alert('Too high. Try Again');
         var userAgeGuess = prompt('How old am I?');
+        var ageGuess = parseInt(userAgeGuess);
     } else if (ageGuess < age) {
         qSixGuesses++;
         var ageGuess = alert('Too low. Try Again');
         var userAgeGuess = prompt('How old am I?');
+        var ageGuess = parseInt(userAgeGuess);
     } else {
         alert("Nailed it! I am 31 years old.")
+        qSixGuesses = 5;
        correctCounter++;
-       break;
     };
  }
 
 //Q7
 var arrayAnswers = ['IL','CA','IN','NY','NC','SC'];
 var userStateGuess = prompt('Please guess a state I have lived.\nPlease enter the state postal code.');
-var upperUserStateGuess = userStateGuess.toUpperCase
+var upperUserStateGuess = userStateGuess.toUpperCase();
+var qSevenGuesses = 0;
+questionCounter++;
+while (qSevenGuesses < 7) {
+    if (arrrayAnswers.Contains(upperUserStateGuess)) {
+        alert('Correct! I have lived in ' + upperUserStateGuess +'.');
+        correctCounter++;
+    } else 
+    var userStateGuess = prompt('Please guess a state I have lived.\nPlease enter the state postal code.');
+    var upperUserStateGuess = userStateGuess.toUpperCase();
+    qSevenGuesses++;
+}
 
 //Check this syntax for game results being fed in...errors exist
 //document.getElementById("results").innerHTML = (correctCounter + ' of '+ questionCounter + ' answers correct.\nBetter luck next time!');
