@@ -78,6 +78,7 @@ var qSixGuesses = 0;
 questionCounter++;
 var userAgeGuess = prompt('How old am I?');
 var ageGuess = parseInt(userAgeGuess);
+
  while (qSixGuesses < 5) {
     if (ageGuess > age) {
         qSixGuesses++;
@@ -102,6 +103,7 @@ var userStateGuess = prompt('Please guess a state I have lived.\nPlease enter th
 var upperUserStateGuess = userStateGuess.toUpperCase();
 var qSevenGuesses = 0;
 questionCounter++;
+
 while (qSevenGuesses < 7) {
     if (arrayAnswers.includes(upperUserStateGuess)) {
         alert('Correct! I have lived in ' + upperUserStateGuess +'.');
@@ -114,4 +116,4 @@ while (qSevenGuesses < 7) {
 }
 
 //Check this syntax for game results being fed in...errors exist
-//document.getElementById("results").innerHTML = (correctCounter + ' of '+ questionCounter + ' answers correct.\nBetter luck next time!');
+document.getElementById("results").innerHTML = (correctCounter + ' of '+ questionCounter + ' answers correct.\nBetter luck next time!');
