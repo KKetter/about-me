@@ -97,17 +97,18 @@ var ageGuess = parseInt(userAgeGuess);
  }
 
 //Q7
-var arrayAnswers = ['IL','CA','IN','NY','NC','SC'];
+var arrayAnswers = ['IL','CA','IN','NY','NC','SC', 'WA'];
 var userStateGuess = prompt('Please guess a state I have lived.\nPlease enter the state postal code.');
 var upperUserStateGuess = userStateGuess.toUpperCase();
 var qSevenGuesses = 0;
 questionCounter++;
 while (qSevenGuesses < 7) {
-    if (arrrayAnswers.Contains(upperUserStateGuess)) {
+    if (arrayAnswers.includes(upperUserStateGuess)) {
         alert('Correct! I have lived in ' + upperUserStateGuess +'.');
         correctCounter++;
+        qSevenGuesses = 7;
     } else 
-    var userStateGuess = prompt('Please guess a state I have lived.\nPlease enter the state postal code.');
+    var userStateGuess = prompt('Incorrect!\nPlease guess a state I have lived.\nPlease enter the state postal code.');
     var upperUserStateGuess = userStateGuess.toUpperCase();
     qSevenGuesses++;
 }
