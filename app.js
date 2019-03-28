@@ -37,7 +37,6 @@ if(upperOreoAnswer === 'YES'||upperOreoAnswer === 'Y'){
 console.log('Asked ' + userName + ' if I like Oreos. Yes is correct, no is ok!.')
 console.log(correctCounter + ' of '+ questionCounter + ' answers correct');
 //Q3
-//ask question as prompt and to Upper
 var branchAnswer = prompt(userName + ', was I in the Army?');
 questionCounter++;
 var upperBranchAnswer = branchAnswer.toUpperCase();
@@ -73,5 +72,32 @@ if(upperBranchAnswer === 'YES'||upperBranchAnswer === 'Y'){
 }
 console.log('Nerd questions about magic asked, I have the 1099s to prove it haha');
 console.log(correctCounter + ' of '+ questionCounter + ' answers correct');
+//Q6 - Guess the Number
+var age = 31;
+var qSixGuesses = 0;
+questionCounter++;
+var userAgeGuess = prompt('How old am I?');
+var ageGuess = parseInt(userAgeGuess);
+ while (qSixGuesses < 4) {
+    if (ageGuess > age) {
+        qSixGuesses++;
+        var ageGuess = alert('Too high. Try Again');
+        var userAgeGuess = prompt('How old am I?');
+    } else if (ageGuess < age) {
+        qSixGuesses++;
+        var ageGuess = alert('Too low. Try Again');
+        var userAgeGuess = prompt('How old am I?');
+    } else {
+        alert("Nailed it! I am 31 years old.")
+       correctCounter++;
+       break;
+    };
+ }
 
-document.getElementById("results").innerHTML = correctCounter + ' of '+ questionCounter + ' answers correct';}
+//Q7
+var arrayAnswers = ['IL','CA','IN','NY','NC','SC'];
+var userStateGuess = prompt('Please guess a state I have lived.\nPlease enter the state postal code.');
+var upperUserStateGuess = userStateGuess.toUpperCase
+
+//Check this syntax for game results being fed in...errors exist
+//document.getElementById("results").innerHTML = (correctCounter + ' of '+ questionCounter + ' answers correct.\nBetter luck next time!');
