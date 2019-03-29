@@ -4,7 +4,6 @@
 var userName = prompt('What is your name?');
 var questionCounter = 0;
 var correctCounter = 0;
-//var userName = tempUserName.toUpperCase();
 alert('Hello ' + userName + ', Shall we play a game? \n\n Please guess the correct answers to the 5 following questions. \n\n Also - no "Only way to win is not to play" nonsense, Wargames was lame.' )
 kentsGameOfQuestions();
 
